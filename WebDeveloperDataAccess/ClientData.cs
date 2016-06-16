@@ -5,22 +5,26 @@ using WebDeveloper.Model;
 
 namespace WebDeveloperDataAccess
 {
-    public class ClientData
+    public class ClientData :BaseDataAccess<Client>
     {
-        public List<Client> getFakeData()
-        {
-            return new List<Client>
-            {
+        //public List<Client> getFakeData() ahi va sin el : BaseDataAccess
+        //{
+        //    return new List<Client>
+        //    {
 
-                new Client {ID=1,Name="Juan",LastName="Perez" },
-                new Client {ID=2,Name="Raul",LastName="Ruidiaz" }
-            };
-        }
+        //        new Client {ID=1,Name="Juan",LastName="Perez" },
+        //        new Client {ID=2,Name="Raul",LastName="Ruidiaz" }
+        //    };
+        //}
         public List<Client> getList()
         {
-            using (var dbContext = new WebContextDb()) {
+            using (var dbContext = new WebContextDb())
+            {
                 return dbContext.Clients.ToList();
             }
         }
+
+
     }
+ 
 }
