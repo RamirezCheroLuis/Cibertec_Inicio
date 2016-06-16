@@ -16,12 +16,22 @@ namespace WebDeveloperDataAccess
         //        new Client {ID=2,Name="Raul",LastName="Ruidiaz" }
         //    };
         //}
-        public List<Client> getList()
+        //public List<Client> getList()
+        //{
+        //    using (var dbContext = new WebContextDb())
+        //    {
+        //        return dbContext.Clients.ToList();
+        //    }
+        //}
+
+        public Client Find(int ID)
         {
-            using (var dbContext = new WebContextDb())
-            {
-                return dbContext.Clients.ToList();
-            }
+            List<Client> ContactsList = new List<Client>();
+            ContactsList = this.GetList();
+
+            return ContactsList
+                .Where(e => e.ID== ID)
+                .SingleOrDefault();
         }
 
 
