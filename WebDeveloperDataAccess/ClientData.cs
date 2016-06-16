@@ -24,14 +24,12 @@ namespace WebDeveloperDataAccess
         //    }
         //}
 
-        public Client Find(int ID)
+        public Client GetClient(int id)
         {
-            List<Client> ContactsList = new List<Client>();
-            ContactsList = this.GetList();
-
-            return ContactsList
-                .Where(e => e.ID== ID)
-                .SingleOrDefault();
+            using (var dbContext = new WebContextDb())
+            {
+                return dbContext.Clients.FirstOrDefault(x => x.ID == id);
+            }
         }
 
 

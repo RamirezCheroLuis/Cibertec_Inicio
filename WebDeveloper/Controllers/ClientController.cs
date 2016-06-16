@@ -34,16 +34,11 @@ namespace WebDeveloper.Controllers
         }
         
         public ActionResult Edit(int ID)
-        {
-
-            if (ID == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Client cliente = _client.Find(ID);
+        {            
+            Client cliente = _client.GetClient(ID);
             if (cliente == null)
             {
-                return HttpNotFound();
+                return RedirectToAction("Index");
             }
             return View(cliente);
         }
@@ -56,6 +51,34 @@ namespace WebDeveloper.Controllers
                 return RedirectToAction("Index");
             }
             return View();
+        }
+        public ActionResult Delete(int id)
+        {
+            var client = _client.GetClient(id);
+            if(client==null)
+            {
+                return RedirectToAction("Index");
+            }
+            return View(client);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(Client client)
+        {
+            if (_client.Delete(client)>0)
+            {                
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
+        public ActionResult Details(int id)
+        {
+            var client = _client.GetClient(id);
+            if (client == null)
+            {
+                return RedirectToAction("Index");
+            }
+            return View(client);
         }
     }
 }
