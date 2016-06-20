@@ -21,6 +21,13 @@ namespace WebDeveloperDataAccess
           };
             clients.ForEach(c => context.Clients.Add(c));
             context.SaveChanges();
+
+            var produc = new List<Product> {
+                new Product {Name="Gaseosa Inka cola",Quantity=5,Stock=500,ExperiredDate="01/06/2016",Price=12.5 } 
+                
+          };
+            produc.ForEach(p => context.Products.Add(p));
+            context.SaveChanges();
         }
     }
 }

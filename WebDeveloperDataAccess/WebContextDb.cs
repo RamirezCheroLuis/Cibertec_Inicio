@@ -17,6 +17,7 @@ namespace WebDeveloperDataAccess
             Database.SetInitializer(new WebDeveloperInitializer());
         }
         public DbSet<Client> Clients { get; set; }
+        public DbSet<Product> Products { get; set; }
 
         //Vamos a conf para que no salga en plural
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
