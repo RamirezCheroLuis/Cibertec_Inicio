@@ -14,7 +14,7 @@ namespace WebDeveloperDataAccess
     {
         public WebContextDb() : base("name=WebDeveloperConnectionString")
         {
-            Database.SetInitializer(new WebDeveloperInitializer());
+            //Database.SetInitializer(new WebDeveloperInitializer());
         }
         public DbSet<Client> Clients { get; set; }
         public DbSet<Product> Products { get; set; }
