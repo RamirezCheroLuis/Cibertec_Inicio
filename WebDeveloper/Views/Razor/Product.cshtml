@@ -22,16 +22,17 @@
     {
         <li>
             <span>@product.Description</span>
-            @DisplayPriceRazor(product.Price)
+            @*@DisplayPriceRazor(product.Price)*@
             <div>
-                @CustomHelper.DisplayPriceStatic(product.Price)
+                @*@CustomHelper.DisplayPriceStatic(product.Price)*@
             </div>
 
             <div>
-                @Html.DisplayPriceExtension(product.Price)
+               @Html.DisplayPriceExtension(product.Price)
+               
             </div>
             <div>
-                @Html.DisplayDateORNull(product.ManufacturingDate)
+                @Html.DisplayDateOrNull(product.ManufacturingDate)
             </div>
         </li>
        

@@ -24,33 +24,33 @@ namespace WebDeveloper.Helpers
             return new HtmlString(result);
         }
 
-        public static IHtmlString DisplayPriceExtension( this HtmlHelper helper,double price)
+        public static IHtmlString DisplayPriceExtension(this HtmlHelper helper, double price)
         {
-            var result = string.Empty;
-            if (price == 0.0)
-            {
-                result = "<span>Free!!!</span>";
-            }
-            else {
-                result = $"<span>{price}</span>";
-            }
-
-            return new HtmlString(result);
+            //var result = string.Empty;
+            //if (price == 0.0)
+            //{
+            //    result = "<span>Free!!!</span>";
+            //}
+            //else {
+            //    result = $"<span>{price}</span>";
+            //}
+            //return new HtmlString(result);
+            return new HtmlString(GetDoubleHtml(price));
 
         }
-        public static IHtmlString DisplayDateORNull(this HtmlHelper helper, DateTime fecha)
+        private static string GetDateHtml(DateTime? date)
         {
-            var result = string.Empty;
-            if (fecha.ToShortDateString()== "01/01/0001")
-            {
-                result = "<span>-</span>";
-            }
-            
-            else {
-                result = $"<span>{fecha.ToShortDateString()}</span>";
-            }
+            return date.HasValue ? $"<span>{Convert.ToDateTime(date).ToShortDateString()}</span>" : "-";
 
-            return new HtmlString(result);
+        }
+        private static string GetDoubleHtml(double valor)
+        {
+            return valor == 0.0 ? "<span>Free!!!</ span >" : $"<span>{valor}</span>";
+
+        }
+        public static IHtmlString DisplayDateOrNull(this HtmlHelper helper, DateTime parametro)
+        {           
+            return new HtmlString(GetDateHtml(parametro));
 
         }
 
