@@ -12,7 +12,7 @@ namespace WebDeveloper.Model
         public int ID { get; set; }
         [Display(Name = "Description")]
         [Required(ErrorMessage = "This First Name is required")]
-        public string Name { get; set; }
+        public string Description { get; set; }
         [Display(Name = "Price")]
         [Required(ErrorMessage = "This Last Name is required")]
         public double Price { get; set; } = 1;
@@ -22,7 +22,9 @@ namespace WebDeveloper.Model
         //[DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}",
         //ApplyFormatInEditMode = true)]
         [Required(ErrorMessage = "This ExperiredDate is required")]
-        public string ExperiredDate { get; set; } = DateTime.Now.ToShortDateString();
+        public string ExperiredDate { get; set; }
+        [DataType(DataType.Date)]
+        public DateTime ManufacturingDate { get; set; }
 
     }
 }

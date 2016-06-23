@@ -9,23 +9,19 @@ namespace WebDeveloperDataAccess
 {
     public class ProductData : BaseDataAccess<Product>
     {
-        //public List<Client> getFakeData() ahi va sin el : BaseDataAccess
-        //{
-        //    return new List<Client>
-        //    {
+        public List<Product> getFakeProducts() {
+            return new List<Product>
+            {
+                new Product {ID=1,Description="Cristal",Price =3.0,ManufacturingDate=DateTime.Now },
+                new Product {ID=2,Description="Pilsen",Price =0.0 },
+                new Product {ID=3,Description="Malca",Price =4.0 },
+                new Product {ID=4,Description="Caral",Price =3.5 },
+                new Product {ID=5,Description="Inka cola",Price =6.0,ManufacturingDate=DateTime.Now },
+                new Product {ID=6,Description="Guarana",Price =0.0 }
+            };
 
-        //        new Client {ID=1,Name="Juan",LastName="Perez" },
-        //        new Client {ID=2,Name="Raul",LastName="Ruidiaz" }
-        //    };
-        //}
-        //public List<Client> getList()
-        //{
-        //    using (var dbContext = new WebContextDb())
-        //    {
-        //        return dbContext.Clients.ToList();
-        //    }
-        //}
-
+        }
+     
         public Product GetProduct(int id)
         {
             using (var dbContext = new WebContextDb())
