@@ -9,7 +9,7 @@ namespace WebDeveloperDataAccess
 {
     public class BaseDataAccess<T> : IDataAccess<T> where T:class 
     {
-        public int add(T entity)
+        public int Add(T entity)
         {
             using (var dbContext=new WebContextDb())
             {

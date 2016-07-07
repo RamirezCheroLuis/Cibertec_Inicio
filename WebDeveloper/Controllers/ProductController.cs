@@ -9,6 +9,7 @@ using WebDeveloperDataAccess;
 
 namespace WebDeveloper.Controllers
 {
+    [Authorize]
     public class ProductController : Controller
     {
         // GET: Client
@@ -27,7 +28,7 @@ namespace WebDeveloper.Controllers
         {
             if (ModelState.IsValid)
             {
-                _product.add(product);
+                _product.Add(product);
                 return RedirectToAction("Index");
             }
             return View();

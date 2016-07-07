@@ -117,10 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Target" xml:space="preserve">
-    <value>H4sIAAAAAAAEAO1YzW7bRhC+F+g7EDy1gKP1z6U1qASuZBdCLdsNneS8IkfyIsslu7sUpGfroY/UV+gsufynaMlKUh8CA4Y4nPnmd3dm+O/f/3jvNhF31iAVi8XYPRudug6IIA6ZWI3dVC/f/OK+e/vjD951GG2cjwXfheFDSaHG7pPWySUhKniCiKpRxAIZq3ipR0EcERrG5Pz09FdydkYAIVzEchzvfSo0iyB7wMdJLAJIdEr5PA6BK0vHN36G6tzRCFRCAxi7n2AxhTXwOAE5pZpeBQEo5TpXnFG0xge+dB0qRKypRlsvPyjwtYzFyk+QQPnjNgHkW1KuwPpwWbHv687puXGHVIIFVJAqHUcHAp5d2PiQtviLouyW8cMIXmOk9dZ4nUVx7E44A6Fdp63qcsKlYWuGeJRlZJQLnTjdVydlVWDxmL8TZ5JynUoYC0i1pMjxkC44C/6A7WP8GcRYpJzXbUQr8V2DgKQHaZTo7XtYWstnU9chTTnSFizFajK5VzOhL85d5w6V0wWHsgRqEfB1LOF3ECCphvCBag0SMzgLIQtiR3tLl/lfaMOawyPkOnO6uQWx0k9jF3+6zg3bQFhQrAUfBMMTh0JaptBj4bDWW6r0/6MZjx9MJNhCzbUb2iOLWrIeqcpwsDhRQ5gGh1anlfpenq+wPB8kC0q10xhDfTjGnym1Hg7HahgFwxd8Pg7ieoNPTEJoyvxrx3L40GDP1JRhLVjTsPQNCTZ6uug5PtgG7QlSVnnT0RzUB93oEthXKxvy5joq+gcZBrBnsg+hPOR93pZ+VUMAyaeAYlogO8YFb06TBDNRGx8sxfHz2WHyxj+8oUY5BglUT18trS014RmlK2i9RdVo6Q2TSpuZZUFNridh1GFrZHFHgAtVzUS176cq6gW/+V3WSs8MVWS2hVSF8QY9i5AjcxJKe8qRoiOYDXCUU9lz601inkZi1805JJ3fY3X5nLI/QtUy6ygVdX+kZgusozXfdBE90opqO4Gkk8FWb2kXxF7lUh7LL1AvxTk+vGB2Sr7WirFdrA5hSftjVF2sDlNR90eynawOY0n7Y7RaWR2r9eob126nEbRZSu1lQ2hd/J69hJ9fJju3cs7iOhisNQvNjexvlYZoZBhG/l+86H4Fw5wKtgSl89HRxV3uvLWLvp69kCgV8r2Ww28+/TIT02fn2wOntfrAK9ZUBk9U/hTRzc9H71jHofXtTSHSdLY3VWD5jHjUHvU9kQPbyJLHVB+9jGQeH7OKvASgdxE5JDSHLRfd6XWf7WFgecjvWSz7RYzW51YetlgM7RV96McuHd2e4pH6Z0xvCoqtKgjzUVNAYM54BVrwzMQyLjKKntUtKlhaCZ+DpqEZvaRmSxpofG1msGzx/Eh5amoiWkA4E/epTlJ9pRREC94YKzwyrD/brJo2e/eJeVJfwgU0k5lr7l78ljIelnbf9FTnDghTh/ZeQatw8Ua41bZEuovFnkA2fFNIQJhb6RGihCOYuhc+XcNLbMMN+xZWNNgWo8FukOcT0Qy7N2V0JWmkLEYlbz7NE/Nt/u1/e4Hm+M0XAAA=</value>
+  <data name="Client_DateCreation" xml:space="preserve">
+    <value>FechaCreacion</value>
   </data>
-  <data name="DefaultSchema" xml:space="preserve">
-    <value>dbo</value>
+  <data name="Client_Id" xml:space="preserve">
+    <value>Codigo</value>
+  </data>
+  <data name="Client_LastName" xml:space="preserve">
+    <value>Apellidos</value>
+  </data>
+  <data name="Client_Name" xml:space="preserve">
+    <value>Nombres</value>
+  </data>
+  <data name="Client_Title" xml:space="preserve">
+    <value>Titulo</value>
   </data>
 </root>
