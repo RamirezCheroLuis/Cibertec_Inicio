@@ -12,48 +12,26 @@ namespace WebDeveloper.Helpers
     {
         public static IHtmlString DisplayPriceStatic(double price)
         {
-            var result = string.Empty;
-            if (price == 0.0)
-            {
-                result = "<span>Free!!!</span>";
-            }
-            else {
-                result = $"<span>{price}</span>";
-            }
-
-            return new HtmlString(result);
+            return new HtmlString(GetHtmlForPrice(price));
         }
 
         public static IHtmlString DisplayPriceExtension(this HtmlHelper helper, double price)
         {
-            //var result = string.Empty;
-            //if (price == 0.0)
-            //{
-            //    result = "<span>Free!!!</span>";
-            //}
-            //else {
-            //    result = $"<span>{price}</span>";
-            //}
-            //return new HtmlString(result);
-            return new HtmlString(GetDoubleHtml(price));
-
+            return new HtmlString(GetHtmlForPrice(price));
         }
+        private static string GetHtmlForPrice(double price)
+        {
+            return price == 0.0 ? "<span>Free!!!</span>" : $"<span>{price.ToString("C")}</span>";
+        }
+
+        public static IHtmlString DisplayDateOrNullExtension(this HtmlHelper helper, DateTime? date)
+        {
+            return new HtmlString(GetDateHtml(date));
+        }
+
         private static string GetDateHtml(DateTime? date)
-        {
-            return date.HasValue ? $"<span>{Convert.ToDateTime(date).ToShortDateString()}</span>" : "-";
-
+        {            
+            return date.HasValue ? $"<span>{date.Value.ToString("dd-mm-yyyy")}</span>" : "None";
         }
-        private static string GetDoubleHtml(double valor)
-        {
-            return valor == 0.0 ? "<span>Free!!!</ span >" : $"<span>{valor}</span>";
-
-        }
-        public static IHtmlString DisplayDateOrNull(this HtmlHelper helper, DateTime parametro)
-        {           
-            return new HtmlString(GetDateHtml(parametro));
-
-        }
-
-
     }
 }

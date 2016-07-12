@@ -15,6 +15,8 @@ namespace WebDeveloper.Model.Account
         [Display(Name ="Password")]
         public string Password { get; set; }
         [Compare("Password",ErrorMessage="The password and confirmation do not match.")]
+        [Required]
+        [DataType(DataType.Password)]
         public string ConfirmPassword { get; set; }
     }
 }
